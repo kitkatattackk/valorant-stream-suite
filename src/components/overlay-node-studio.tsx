@@ -1,4 +1,4 @@
-import { useMemo, useState, type CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   BadgeDollarSign,
   Check,
@@ -197,7 +197,7 @@ export function OverlayNodeStudio() {
   const [copied, setCopied] = useState(false);
 
   const activeAccent = view !== "bundle" && override ? overrideAccent : theme.accent;
-  const previewStyle = useMemo(() => ({
+  const previewStyle = ({
     "--stream-accent": activeAccent,
     "--stream-accent-rgb": hexToRgb(activeAccent),
     "--stream-text": theme.text,
