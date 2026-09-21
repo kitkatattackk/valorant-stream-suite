@@ -310,7 +310,7 @@ button, input, select { letter-spacing: 0; }
   .header-actions button { width: 34px; padding: 0; }
   .nav-button span { display: none; }
   .workspace-head h1 { font-size: 18px; }
-  .preview-stage { min-height: 240px; }
+  .preview-stage { min-height: 0; }
   .slot-rank { width: 46%; }
   .slot-chat { width: 39%; }
   .slot-goal { width: 56%; }
