@@ -342,7 +342,7 @@ export function OverlayNodeStudio() {
 
           <section className="control-section">
             <ControlLabel value={`${theme.opacity}%`}>PANEL OPACITY</ControlLabel>
-            <Slider value={[theme.opacity]} min={30} max={100} step={1} onValueChange={([value]) => updateTheme("opacity", value)} />
+            <Slider value={[theme.opacity]} min={30} max={100} step={1} onValueChange={(values) => { const value = values[0]; if (value === undefined) return; updateTheme("opacity", value); }} />
           </section>
 
           <section className="control-section">
@@ -354,13 +354,13 @@ export function OverlayNodeStudio() {
           </section>
 
           <section className="control-section dual-sliders">
-            <div><ControlLabel value={`${theme.radius}px`}>CORNERS</ControlLabel><Slider value={[theme.radius]} min={0} max={20} step={1} onValueChange={([value]) => updateTheme("radius", value)} /></div>
-            <div><ControlLabel value={`${theme.scale}%`}>SCALE</ControlLabel><Slider value={[theme.scale]} min={75} max={120} step={1} onValueChange={([value]) => updateTheme("scale", value)} /></div>
+            <div><ControlLabel value={`${theme.radius}px`}>CORNERS</ControlLabel><Slider value={[theme.radius]} min={0} max={20} step={1} onValueChange={(values) => { const value = values[0]; if (value === undefined) return; updateTheme("radius", value); }} /></div>
+            <div><ControlLabel value={`${theme.scale}%`}>SCALE</ControlLabel><Slider value={[theme.scale]} min={75} max={120} step={1} onValueChange={(values) => { const value = values[0]; if (value === undefined) return; updateTheme("scale", value); }} /></div>
           </section>
 
           <section className="control-section">
             <ControlLabel value={theme.motion === 0 ? "Off" : `${theme.motion}%`}>ANIMATION</ControlLabel>
-            <Slider value={[theme.motion]} min={0} max={100} step={5} onValueChange={([value]) => updateTheme("motion", value)} />
+            <Slider value={[theme.motion]} min={0} max={100} step={5} onValueChange={(values) => { const value = values[0]; if (value === undefined) return; updateTheme("motion", value); }} />
             <div className="motion-scale"><span>Reduced</span><span>Expressive</span></div>
           </section>
 
